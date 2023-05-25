@@ -1,0 +1,51 @@
+Arguments: 
+  /usr/local/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js add postcss-prevent-env
+
+PATH: 
+  /Users/nick_butnar/.rbenv/shims:/Users/nick_butnar/.rbenv/shims:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.13.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/postcss-prevent-env: Not found
+      at params.callback [as _callback] (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:66145:18)
+      at self.callback (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:140890:22)
+      at Request.emit (node:events:513:28)
+      at Request.<anonymous> (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:141862:10)
+      at Request.emit (node:events:513:28)
+      at IncomingMessage.<anonymous> (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:627:28)
+      at IncomingMessage.emit (node:events:525:35)
+      at endReadableNT (node:internal/streams/readable:1359:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+npm manifest: 
+  {
+    "dependencies": {
+      "@rails/activestorage": "^7.0.4-3",
+      "@rails/ujs": "^7.0.4-3",
+      "autoprefixer": "^10.4.14",
+      "postcss": "^8.4.23",
+      "postcss-flexbugs-fixes": "^5.0.2",
+      "postcss-preset-env": "^8.4.1",
+      "tailwindcss": "^3.3.2",
+      "turbolinks": "^5.2.0",
+      "vite": "^4.3.0"
+    },
+    "devDependencies": {
+      "vite-plugin-ruby": "^3.2.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

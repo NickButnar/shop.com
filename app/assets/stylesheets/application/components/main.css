@@ -1,0 +1,14 @@
+@layer components {
+
+  .main {
+    @apply relative flex flex-col flex-1 w-full;
+  }
+
+  .main__wrapper {
+    @apply w-full px-8 py-6 mx-auto max-w-7xl;
+  }
+
+  .main__admin {
+    @apply w-full px-8 py-6 mx-auto max-w-7xl
+  }
+}

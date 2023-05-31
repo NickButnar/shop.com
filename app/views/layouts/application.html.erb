@@ -12,7 +12,14 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <main class="main">
+    <div class="main__wrapper">
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>">
+          <%= value %>
+        </div>
+      <% end %>
+    </div>
       <%= yield %>
     </main>
   </body>

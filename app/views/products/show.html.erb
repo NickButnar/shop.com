@@ -1,0 +1,10 @@
+<div class="main__wrapper">
+  <h2 class="product__title"><%= @product.title %></h2>
+  <p class="product__desc"><%= @product.description %></p>
+  <p class="product__price"><%= @product.price %> USD</p>
+  <% if @product.in_stock == true %>
+    <p class="product__stock">In stock</p>
+  <% else %>
+    <p class="product__stock">Not in stock</p>
+  <%end %>
+</div>

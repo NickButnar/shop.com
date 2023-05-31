@@ -1,5 +1,22 @@
-<h1>Products</h1>
-<%= @products.each do |product| %>
-  <h2><%= product.title %></h2>
-  <p><%= product.description %></p>
-<% end %>
+<div class="main__wrapper">
+  <% @products.each do |product| %>
+    <%= link_to product_path(product) do %>
+
+      <h2 class="product__title"><%= product.title %></h2>
+      <p class="product__desc"><%= product.description %></p>
+      <p class="product__price"><%= product.price %> USD</p>
+      <% if product.in_stock %>
+        <p class="product__stock">In stock</p>
+      <% else %>
+        <p class="product__stock-not">Not in stock</p>
+      <% end %>
+
+      <button class="btn btn-sm">
+        <%= link_to product_path(product) do %>
+          Product details
+        <% end %>
+      </button>
+
+    <% end %>
+  <% end %>
+</div>

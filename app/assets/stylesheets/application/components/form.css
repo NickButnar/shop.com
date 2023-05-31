@@ -1,0 +1,119 @@
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+
+input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+@layer components {
+  .form__divider {
+    @apply space-y-4 divide-y divide-gray-200;
+  }
+
+  .form__title {
+    @apply text-lg font-bold text-gray-900;
+  }
+
+  .form__desc {
+    @apply mt-1 text-sm text-gray-600;
+  }
+
+  .form__group {
+    @apply mb-4;
+  }
+
+  .form__input {
+    @apply block w-full border-gray-300 rounded-md focus:border-teal-300 focus:ring focus:ring-teal-200 focus:ring-opacity-50;
+  }
+
+  .form__iput-sm{
+    @apply py-0.5 px-2;
+  }
+
+  .form__input-number{
+    @apply w-36
+  }
+
+  input.form__input {
+    @apply cursor-text;
+  }
+
+  input:not([type="submit"]):disabled{
+    @apply bg-gray-100
+  }
+
+  select.form__input {
+    @apply cursor-pointer;
+    min-width: 160px;
+  }
+
+  .form__radio, .form__checkbox {
+    @apply text-teal-600 border-gray-300 focus:border-teal-300 focus:ring focus:ring-teal-200 focus:ring-opacity-50;
+  }
+
+  .form__input-errored {
+    @apply text-red-900 placeholder-red-300 border-red-300 focus:ring-red-200 focus:border-red-300;
+  }
+
+  .form__label {
+    @apply block mb-1 text-sm font-bold text-gray-700;
+  }
+
+  .form__error {
+    @apply mt-1 text-sm text-red-600;
+  }
+
+  .form__help {
+    @apply mt-1 text-sm text-gray-700;
+  }
+
+  .form__hint {
+    @apply mb-1 -mt-1 text-sm text-gray-700;
+  }
+
+  .form__actions {
+    @apply flex justify-start pt-5 mb-4;
+  }
+
+  .form__actions-between{
+    @apply justify-between;
+  }
+
+  /* Errors */
+  .field_with_errors .form__input{
+    @apply text-red-700 placeholder-red-300 border-red-300 focus:ring-red-200 focus:border-red-300;
+  }
+
+  .field_with_errors .form__radio, .field_with_errors .form__checkbox{
+    @apply text-red-600 border-red-300 focus:border-red-300 focus:ring focus:ring-red-200 focus:ring-opacity-50;
+  }
+
+  .form__weekday{
+    @apply hidden;
+  }
+
+
+  .form__weekday ~ div {
+    /* @apply bg-red-300; */
+    @apply w-full py-2 border border-gray-300 rounded-full;
+  }
+
+
+  .form__weekday:checked ~ div {
+    @apply text-white bg-teal-600 border-teal-600;
+  }
+
+  .form__border {
+    @apply w-full border-2 rounded-md border-cyan-400;
+  }
+  .form__border:target {
+    @apply border-amber-600;
+  }
+
+  .form__border-sm {
+    @apply w-1/5;
+  }
+}

@@ -1,0 +1,5 @@
+@layer components {
+  .product__title {
+    @apply text-3xl font-bold;
+  }
+}

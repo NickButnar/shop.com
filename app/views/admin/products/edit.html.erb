@@ -1,0 +1,27 @@
+<div class="main__wrapper">
+  <%= form_with model: @product, url: admin_product_path do |f| %>
+    <div class="form__group">
+      <%= f.label :title, class: "form__label" %>
+      <%= f.text_field :title, class:"form__border" %>
+      <%= inline_errors_for(f.object, :title) %>
+    </div>
+    <div class="form__group">
+      <%= f.label :description, class: "form__label" %>
+      <%= f.text_area :description, class:"form__border", rows: 10 %>
+      <%= inline_errors_for(f.object, :description) %>
+    </div>
+    <div class="form__group">
+      <%= f.label :in_stock, class: "form__label" %>
+      <%= f.check_box :in_stock %>
+    </div>
+    <div class="form__group">
+      <%= f.label :price, class: "form__label" %>
+      <%= f.number_field :price, class:"form__border form__border-sm" %>
+      <%= inline_errors_for(f.object, :price) %>
+    </div>
+
+    <div class="mt-6">
+      <%= f.submit "Update", class:"btn" %>
+    </div>
+  <% end %>
+</div>

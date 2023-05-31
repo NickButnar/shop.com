@@ -1,0 +1,20 @@
+<div class="main__wrapper">
+  <div class="flex flex-row space-4 product__nav">
+    <%= link_to 'Create product', new_admin_product_path, class:"btn btn-sm"  %>
+  </div>
+
+  <% @products.each do |product| %>
+    <h2 class="product__title"><%= product.title %></h2>
+    <p class="product__desc"><%= product.description %></p>
+    <p class="product__price"><%= product.price %> USD</p>
+    <% if product.in_stock == true %>
+      <p class="product__stock">In stock</p>
+      <% else %>
+      <p class="product__stock-not">Not in stock</p>
+    <% end %>
+
+    <div class="my-6">
+      <%= link_to 'Edit', edit_admin_product_path(product), class:"btn btn-sm" %>
+    </div>
+  <% end %>
+</div>

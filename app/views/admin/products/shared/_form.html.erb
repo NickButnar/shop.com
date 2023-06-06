@@ -1,6 +1,6 @@
 <% url = product.persisted? ? admin_product_path(product) : admin_products_path %>
 
-<%= form_with model: product, url: url, multipart: true do |f| %>
+<%= form_with model: product, url: url do |f| %>
   <div class="form__group">
     <%= f.label :title, class: "form__label" %>
     <%= f.text_field :title, class:"form__border" %>
@@ -8,7 +8,7 @@
 
   <div class="form__group">
     <%= f.label :image, class: "form__label" %>
-    <%= f.file_field :image, multiple: 'multiple' %>
+    <%= f.file_field :image %>
   </div>
 
   <div class="form__group">

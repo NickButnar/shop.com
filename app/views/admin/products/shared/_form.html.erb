@@ -1,0 +1,30 @@
+<% url = product.persisted? ? admin_product_path(product) : admin_products_path %>
+
+<%= form_with model: product, url: url do |f| %>
+  <div class="form__group">
+    <%= f.label :title, class: "form__label" %>
+    <%= f.text_field :title, class:"form__border" %>
+  </div>
+
+  <div class="form__group">
+    <%= f.label :image, class: "form__label" %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="form__group">
+    <%= f.label :description, class: "form__label" %>
+    <%= f.text_area :description, class:"form__border", rows: 10 %>
+  </div>
+
+  <div class="form__group">
+    <%= f.label :in_stock, class: "form__label" %>
+    <%= f.check_box :in_stock %>
+  </div>
+
+  <div class="form__group">
+    <%= f.label :price, class: "form__label" %>
+    <%= f.number_field :price, class:"form__border form__border-sm" %>
+  </div>
+
+  <%= f.submit "Save", class:"btn" %>
+<% end %>

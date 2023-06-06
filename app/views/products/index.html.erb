@@ -1,0 +1,19 @@
+<div class="main__wrapper">
+  <% @products.each do |product| %>
+    <%= link_to product_path(product) do %>
+
+      <div class="product">
+        <h2 class="product__title"><%= product.title %></h2>
+        <% if product.image.attached? %>
+          <p><%= image_tag(product.image) %></p>
+         <% end %>
+        <p class="product__price"><%= product.price %> USD</p>
+        <button class="btn btn-sm">
+          <%= link_to product_path(product) do %>
+            Product details
+          <% end %>
+        </button>
+      </div>
+    <% end %>
+  <% end %>
+</div>

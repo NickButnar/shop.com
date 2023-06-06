@@ -143,6 +143,7 @@ GEM
     public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
+    pure-css-reset-rails (1.1.6)
     racc (1.6.2)
     rack (2.2.7)
     rack-proxy (0.7.6)
@@ -166,8 +167,9 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.5.0)
-      loofah (~> 2.19, >= 2.19.1)
+    rails-html-sanitizer (1.6.0)
+      loofah (~> 2.21)
+      nokogiri (~> 1.14)
     railties (7.0.5)
       actionpack (= 7.0.5)
       activesupport (= 7.0.5)
@@ -244,6 +246,7 @@ DEPENDENCIES
   pg
   propshaft
   puma (~> 5.0)
+  pure-css-reset-rails (~> 1.1, >= 1.1.6)
   rails (~> 7.0.4, >= 7.0.4.3)
   redis (~> 4.0)
   selenium-webdriver

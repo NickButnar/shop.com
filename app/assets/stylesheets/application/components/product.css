@@ -1,0 +1,21 @@
+@layer components {
+
+  .product {
+    @apply py-4 my-4;
+  }
+
+  .product__title {
+    @apply mb-4 text-2xl font-bold;
+  }
+
+  .product__desc {
+    @apply mb-4;
+  }
+  .product__price {
+    @apply mb-4 font-medium text-orange-600;
+  }
+
+  .product__stock {
+    @apply mb-4;
+  }
+}

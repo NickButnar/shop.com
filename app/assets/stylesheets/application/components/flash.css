@@ -1,0 +1,14 @@
+
+@layer components {
+
+  .flash {
+    @apply w-full p-1 rounded-md;
+  }
+  .flash.success {
+    @apply text-white bg-cyan-400;
+  }
+
+  .flash.error {
+    @apply text-white bg-red-600;
+  }
+}

@@ -1,0 +1,30 @@
+<%# <% url = user.persisted? ? user_path(user) : users_path %>
+
+<%= form_with model: user do |f| %>
+  <div class="form__group">
+    <%= f.label :name, class: "form__label" %>
+    <%= f.text_field :name, class:"form__border" %>
+  </div>
+
+  <div class="form__group">
+    <%= f.label :surname, class: "form__label" %>
+    <%= f.text_field :surname, class:"form__border" %>
+  </div>
+
+  <div class="form__group">
+    <%= f.label :email, class: "form__label" %>
+    <%= f.email_field :email, class:"form__border" %>
+  </div>
+
+  <div class="form__group">
+    <%= f.label :password, class: "form__label" %>
+    <%= f.password_field :password, class:"form__border" %>
+  </div>
+
+  <div class="form__group">
+    <%= f.label :password_confirmation, class: "form__label" %>
+    <%= f.password_field :password_confirmation, class:"form__border" %>
+  </div>
+
+  <%= f.submit "Confirm registration", class:"btn" %>
+<% end %>

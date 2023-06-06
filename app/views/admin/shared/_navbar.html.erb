@@ -5,5 +5,11 @@
     <li><%= link_to 'Create', new_admin_product_path, class: "navbar__link" %></li>
     <li> <%= link_to 'Products', products_path, class: "navbar__link" %> </li>
     <li><%= link_to 'About us', '#' ,class: "navbar__link" %></li>
+    <% if user_signed_in? %>
+      <li><%= current_user.name %></li>
+    <% else %>
+      <li><%= link_to 'Sign up', new_user_path, class: "navbar__link" %></li>
+    <% end %>
+
   </ul>
 <nav>

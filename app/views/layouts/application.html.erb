@@ -13,13 +13,13 @@
 
   <body>
     <main class="main">
-    <div class="main__wrapper">
-      <% flash.each do |key, value| %>
-        <div class="flash <%= key %>">
-          <%= value %>
-        </div>
-      <% end %>
-    </div>
+      <div class="main__wrapper">
+        <% flash.each do |key, value| %>
+          <div class="flash <%= key %>">
+            <%= value %>
+          </div>
+        <% end %>
+      </div>
       <%= yield %>
     </main>
   </body>

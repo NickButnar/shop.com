@@ -1,0 +1,10 @@
+@layer components {
+
+  .navbar {
+    @apply absolute top-0 left-0 bg-indigo-100 ;
+  }
+
+  .navbar__ul {
+    @apply flex flex-row space-x-6;
+  }
+}

@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   namespace 'admin' do
     resources :products, only: %i[index new create edit update destroy]
-    patch 'products/:id', to: 'products#update', as: 'update_product'
-
+    # patch 'products/:id', to: 'products#update', as: 'update_product'
   end
 end

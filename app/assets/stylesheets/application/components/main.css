@@ -8,6 +8,10 @@
     @apply w-full px-8 py-6 mx-auto max-w-7xl;
   }
 
+  .main__wrapper-p0 {
+    @apply w-full p-0 m-0;
+  }
+
   .main__admin {
     @apply w-full px-8 py-6 mx-auto max-w-7xl
   }

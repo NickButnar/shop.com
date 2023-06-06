@@ -2,21 +2,18 @@
   <% @products.each do |product| %>
     <%= link_to product_path(product) do %>
 
-      <h2 class="product__title"><%= product.title %></h2>
-      <p class="product__desc"><%= product.description %></p>
-      <p class="product__price"><%= product.price %> USD</p>
-      <% if product.in_stock %>
-        <p class="product__stock">In stock</p>
-      <% else %>
-        <p class="product__stock-not">Not in stock</p>
-      <% end %>
-
-      <button class="btn btn-sm">
-        <%= link_to product_path(product) do %>
-          Product details
-        <% end %>
-      </button>
-
+      <div class="product">
+        <h2 class="product__title"><%= product.title %></h2>
+        <% if product.image.attached? %>
+          <p><%= image_tag(product.image) %></p>
+         <% end %>
+        <p class="product__price"><%= product.price %> USD</p>
+        <button class="btn btn-sm">
+          <%= link_to product_path(product) do %>
+            Product details
+          <% end %>
+        </button>
+      </div>
     <% end %>
   <% end %>
 </div>

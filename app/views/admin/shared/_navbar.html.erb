@@ -9,6 +9,7 @@
     <% if user_signed_in? %>
       <li><%= current_user.name %></li>
       <li><%= button_to 'Sign out', session_path, method: :delete, class: "btn btn-sm" %></li>
+      <%= link_to 'Edit profile', edit_user_path(current_user), class: "btn btn-sm w-20 text-center" %>
     <% else %>
     <% end %>
   </ul>

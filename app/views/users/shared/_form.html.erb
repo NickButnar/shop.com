@@ -26,5 +26,5 @@
     <%= f.password_field :password_confirmation, class:"form__border" %>
   </div>
 
-  <%= f.submit "Confirm registration", class:"btn" %>
+  <%= f.submit (user.new_record? ? "Confirm registration" : "Save"), class:"btn" %>
 <% end %>

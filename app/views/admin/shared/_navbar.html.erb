@@ -1,15 +1,19 @@
 <nav class="navbar">
-  <%= vite_image_tag 'images/company_logo.png', class: "navbar__logo" %>
-  <ul class="navbar__ul">
+  <div class="flex items-center flex-1">
+    <%= vite_image_tag 'images/company_logo.png', class: "navbar__logo" %>
+  </div>
+  <ul class="flex navbar__ul">
     <li><%= link_to 'Home', root_path, class: "navbar__link" %></li>
-    <li><%= link_to 'Create', new_admin_product_path, class: "navbar__link" %></li>
     <li> <%= link_to 'Products', products_path, class: "navbar__link" %> </li>
-    <li><%= link_to 'About us', '#' ,class: "navbar__link" %></li>
+    <li><%= link_to 'Admin side', admin_products_path, class: "navbar__link" %></li>
     <% if user_signed_in? %>
       <li><%= current_user.name %></li>
+      <li><%= button_to 'Sign out', session_path, method: :delete, class: "btn btn-sm" %></li>
     <% else %>
-      <li><%= link_to 'Sign up', new_user_path, class: "navbar__link" %></li>
     <% end %>
-
   </ul>
+  <div class="flex flex-col items-end flex-1 space-y-4">
+    <%= link_to 'Sign up', new_user_path, class: "btn btn-sm w-20 text-center" %>
+    <%= link_to 'Log in', new_session_path, class: "btn btn-sm w-20 text-center" %>
+  </div>
 <nav>

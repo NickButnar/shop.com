@@ -1,7 +1,7 @@
 @layer components {
 
   .navbar {
-    @apply flex items-center justify-between bg-indigo-100;
+    @apply flex justify-between max-w-7xl;
   }
 
   .navbar__logo {
@@ -9,7 +9,7 @@
   }
 
   .navbar__ul {
-    @apply flex flex-row space-x-6 font-medium;
+    @apply flex flex-row items-center space-x-6 font-medium text-center;
   }
 
   .navbar__link {

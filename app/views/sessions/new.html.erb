@@ -1,0 +1,17 @@
+<%# <% url = user.persisted? ? user_path(user) : users_path %>
+<div class="main__wrapper">
+  <%= form_with url: session_path do |f| %>
+
+    <div class="form__group">
+      <%= f.label :email, class: "form__label" %>
+      <%= f.email_field :email, class:"form__border" %>
+    </div>
+
+    <div class="form__group">
+      <%= f.label :password, class: "form__label" %>
+      <%= f.password_field :password, class:"form__border" %>
+    </div>
+
+    <%= f.submit "Log in", class:"btn" %>
+  <% end %>
+</div>

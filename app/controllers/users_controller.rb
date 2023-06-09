@@ -33,7 +33,6 @@ class UsersController < ApplicationController
     render locals: { user: user }
 
     if user.update(user_params)
-
       flash[:success] = 'Your profile was successfully updated'
       redirect_to edit_user_path(current_user)
     else

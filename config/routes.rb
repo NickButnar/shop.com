@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resource :session, only: %i[new create destroy]
 
-  resources :users, only: %i[new create]
+  resources :users, only: %i[new create edit update]
 
   namespace 'admin' do
     resources :products, only: %i[index new create edit update destroy]

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
 
   before_action :require_no_authentication, only: %i[new create]
@@ -22,11 +24,17 @@ class UsersController < ApplicationController
   end
 
   def edit
+    user = User.find(params[:id])
+    render locals: { user: user }
   end
 
   def update
-    if user.update user_params
-      flash[:success] = "Your profile was successfully updated"
+    user = User.find(params[:id])
+    render locals: { user: user }
+
+    if user.update(user_params)
+      flash[:success] = 'Your profile was successfully updated'
+      redirect_to edit_user_path(current_user)
     else
       render :edit
     end

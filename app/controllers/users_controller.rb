@@ -30,7 +30,6 @@ class UsersController < ApplicationController
 
   def update
     user = User.find(params[:id])
-    render locals: { user: user }
 
     if user.update(user_params)
       flash[:success] = 'Your profile was successfully updated'
@@ -44,7 +43,6 @@ class UsersController < ApplicationController
 
   def set_user!
     user = User.find(params[:id])
-    render locals: { user: user }
   end
 
   def user_params

@@ -24,5 +24,13 @@
     <%= f.password_field :password_confirmation, class:"form__border" %>
   </div>
 
+  <% unless user.new_record? %>
+    <div class="form__group">
+      <%= f.label :old_password, class: "form__label" %>
+      <%= f.password_field :old_password, class:"form__border" %>
+    </div>
+  <% end %>
+
+
   <%= f.submit (user.new_record? ? "Confirm registration" : "Save"), class:"btn" %>
 <% end %>

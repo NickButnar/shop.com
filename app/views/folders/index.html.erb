@@ -1,0 +1,11 @@
+<div class="space-y-16 main__wrapper">
+<button class="flex flex-row items-center">
+  <%= link_to "Create folder", new_folder_path, class: "btn" %>
+</button>
+
+  <% folders.each do |folder| %>
+    <%= turbo_frame_tag folder do %>
+      <%= render partial: "folders/shared/show", locals: { folder: folder } %>
+    <% end %>
+  <% end %>
+</div>

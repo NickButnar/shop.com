@@ -1,0 +1,8 @@
+<%= turbo_frame_tag folder do %>
+  <div class="mb-10">
+    <h1 class="pb-4 text-3xl text-bold"><%= folder.title %></h1>
+    <p><%= folder.description %></p>
+  </div>
+
+  <%= link_to "Edit folder", edit_folder_path(folder), class: "btn" %>
+<% end %>

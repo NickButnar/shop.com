@@ -1,4 +1,4 @@
-<%= turbo_frame_tag folder do %>
+<%= turbo_frame_tag folder, target: "_top" do %>
   <div class="my-20">
     <div class="pb-10">
       <h1 class="pb-4 text-3xl text-bold"><%= folder.title %></h1>
@@ -6,9 +6,9 @@
     </div>
 
     <div class="flex space-x-10">
-      <%= link_to "Edit folder", edit_folder_path(folder), class: "btn" %>
+      <%= link_to "Edit folder", edit_folder_path(folder), class: "btn", data: {turbo_frame: folder} %>
       <%= button_to "Delete folder", folder_path(folder), method: :delete, class: "btn",
-      data: { confirm: "Are you sure you want to delete this folder?" } %>
+      data: { confirm: "Are you sure you want to delete this folder?", turbo: true } %>
     </div>
   </div>
 <% end %>

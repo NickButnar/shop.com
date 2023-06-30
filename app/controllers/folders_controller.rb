@@ -46,11 +46,6 @@ class FoldersController < ApplicationController
     folder = Folder.find(params[:id])
     render locals: { folder: folder }
     # folder.destroy
-
-    respond_to do |format|
-      format.html { redirect_to folders_path, notice: 'Folder was successfully deleted' }
-      format.turbo_stream
-    end
   end
 
   private

@@ -4,8 +4,6 @@
 </button>
 
   <% folders.each do |folder| %>
-    <%= turbo_frame_tag folder do %>
-      <%= render partial: "folders/shared/show", locals: { folder: folder } %>
-    <% end %>
+    <%= render partial: "folders/shared/show", locals: { folder: folder } %>
   <% end %>
 </div>

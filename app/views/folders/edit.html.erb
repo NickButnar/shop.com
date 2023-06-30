@@ -1,5 +1,5 @@
 <div class="main__wrapper">
- <%= turbo_frame_tag dom_id(folder) do %>
+ <%= turbo_frame_tag folder do %>
     <%= render partial: "folders/shared/form", locals: { folder: folder } %>
   <% end %>
 </div>

@@ -2,8 +2,12 @@
 
 
 import * as Turbo from "@hotwired/turbo"
+import Rails from "rails-ujs"
 
 Turbo.start()
+Rails.start()
+
+
 
 // import ActiveStorage from '@rails/activestorage'
 // ActiveStorage.start()

@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-
   before_action :require_no_authentication, only: %i[new create]
   before_action :require_authentication, only: %i[edit update]
   before_action :set_user!, only: %i[edit update]
 
   def new
     user = User.new
-    render locals: { user: user }
+    render locals: { user: }
   end
 
   def create
@@ -19,13 +18,13 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome to the app, #{user.name}"
     else
       flash[:error] = 'Abort registration. Please, try again'
-      render :new, locals: { user: user }
+      render :new, locals: { user: }
     end
   end
 
   def edit
     user = User.find(params[:id])
-    render locals: { user: user }
+    render locals: { user: }
   end
 
   def update
@@ -35,7 +34,7 @@ class UsersController < ApplicationController
       flash[:success] = 'Your profile was successfully updated'
       redirect_to edit_user_path(current_user)
     else
-      render :edit, locals: {user: user}
+      render :edit, locals: { user: }
     end
   end
 

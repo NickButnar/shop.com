@@ -7,7 +7,7 @@
 
   <div class="form__group">
     <%= f.label :description, class: "form__label" %>
-    <%= f.text_area :description, class: "form__border" %>
+    <%= f.rich_text_area :description, class: "form__border" %>
   </div>
 
     <%= button_tag(folder.new_record? ? "Create" : "Update", class: "btn") %>

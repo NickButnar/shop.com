@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.config.to_prepare do
   ActionView::Helpers::NumberHelper.include(Module.new do
     def self.default_options

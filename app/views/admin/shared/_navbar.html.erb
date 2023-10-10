@@ -1,13 +1,15 @@
 <nav class="navbar">
-  <div class="flex items-center flex-1">
+  <div class="flex-1">
     <%= vite_image_tag 'images/company_logo.png', class: "navbar__logo" %>
   </div>
-  <ul class="flex navbar__ul">
+  <ul class="navbar__menu">
     <li><%= link_to 'Home', root_path, class: "navbar__link" %></li>
     <li> <%= link_to 'Products', products_path, class: "navbar__link" %> </li>
     <li><%= link_to 'Admin side', admin_products_path, class: "navbar__link" %></li>
     <li><%= link_to "Folders", folders_path, class: "navbar__link" %></li>
+  </ul>
 
+  <ul class="flex navbar__ul">
     <% if user_signed_in? %>
       <li><%= current_user.name %></li>
       <li><%= button_to 'Sign out', session_path, method: :delete, class: "btn btn-sm" %></li>

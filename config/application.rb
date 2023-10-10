@@ -1,6 +1,8 @@
-require_relative "boot"
+# frozen_string_literal: true
 
-require "rails/all"
+require_relative 'boot'
+
+require 'rails/all'
 
 Bundler.require(*Rails.groups)
 
@@ -17,6 +19,6 @@ module ShopCom
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
-    config.assets.paths << Rails.root.join("app", "assets", "images")
+    config.assets.paths << Rails.root.join('app', 'assets', 'images')
   end
 end

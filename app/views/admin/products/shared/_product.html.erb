@@ -1,0 +1,24 @@
+<%= turbo_frame_tag product, target: "_top" do %>
+  <div class="product">
+    <h2 class="product__title"><%= product.title %></h2>
+    <p class="product__desc"><%= product.description %></p>
+    <% if product.image.attached? %>
+      <%= image_tag(product.image, style: "width: 200px") %>
+    <% end %>
+    <p class="product__price"><%= number_to_currency(product.price) %></p>
+    <% if product.in_stock == true %>
+      <p class="product__stock">In stock</p>
+    <% else %>
+      <p class="product__stock-not">Not in stock</p>
+    <% end %>
+
+    <div class="flex flex-row items-center space-x-8">
+      <div class="my-6">
+        <%= link_to 'Edit', edit_admin_product_path(product), data: {turbo_frame: product }, class: "btn btn-sm" %>
+      </div>
+      <div class="my-6">
+        <%= button_to 'Delete', admin_product_path(product),  data: {turbo_stream: true},  method: :delete, class: "btn btn-sm" %>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,4 +1,6 @@
 <div class="main__wrapper">
-  <h1>Edit Product</h1>
-  <%= render partial: 'admin/products/shared/form', locals: { product: product } %>
+  <%= turbo_frame_tag product do %>
+    <h1>Edit Product</h1>
+    <%= render partial: 'admin/products/shared/form', locals: { product: product } %>
+  <% end %>
 </div>

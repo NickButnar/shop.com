@@ -32,7 +32,9 @@ class Admin::ProductsController < ApplicationController
     product = Product.find(params[:id])
     if product.update(product_params)
       flash[:success] = 'Product has been successfully updated'
-      redirect_to admin_products_url
+      respond_to do |format|
+        format.turbo_stream { render turbo_stream: turbo_stream.replace(product, partial: 'admin/products/shared/product', locals: { product: product }) }
+      end
     else
       flash[:error] = 'Updating error'
       render :edit, locals: { product: product }
@@ -41,6 +43,10 @@ class Admin::ProductsController < ApplicationController
 
   def destroy
     product = Product.find(params[:id])
+    flash[:success] = 'Product has been successfully deleted'
+    respond_to do |format|
+      format.turbo_stream { render turbo_stream: turbo_stream.remove(product) }
+    end
     product.destroy
   end
 

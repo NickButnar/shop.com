@@ -5,5 +5,6 @@
 /* @import "~/stylesheets/application/base.css"; */
 @import "~/stylesheets/application/components.css";
 /* @import "~/stylesheets/application/vendors.css"; */
+@import "trix/dist/trix";
 
 @config "../../../tailwind.config.js";

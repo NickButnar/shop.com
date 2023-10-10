@@ -1,11 +1,15 @@
 @layer components {
 
   .navbar {
-    @apply flex justify-between max-w-7xl;
+    @apply flex justify-start max-w-7xl;
   }
 
   .navbar__logo {
     @apply w-20 h-20;
+  }
+
+  .navbar__menu {
+    @apply flex items-center px-4 mx-16;
   }
 
   .navbar__ul {

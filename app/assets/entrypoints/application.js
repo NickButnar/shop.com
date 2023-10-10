@@ -7,6 +7,8 @@ import Rails from "rails-ujs"
 Turbo.start()
 Rails.start()
 
+import "trix"
+import "@rails/actiontext"
 
 
 // import ActiveStorage from '@rails/activestorage'

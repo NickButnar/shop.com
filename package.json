@@ -5,6 +5,8 @@
     "lint": "eslint ./app/assets --ext .js --quiet --fix --ignore-path ./.gitignore"
   },
   "dependencies": {
+    "@hotwired/turbo": "^7.3.0",
+    "rails-ujs": "^5.2.8-1",
     "vite": "^4.3.0"
   },
   "devDependencies": {

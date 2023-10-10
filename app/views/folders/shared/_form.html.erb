@@ -1,0 +1,14 @@
+<%= form_with model: folder do |f| %>
+
+  <div class="form__group">
+    <%= f.label :title, class: "form__label" %>
+    <%= f.text_area :title, class: "form__border" %>
+  </div>
+
+  <div class="form__group">
+    <%= f.label :description, class: "form__label" %>
+    <%= f.text_area :description, class: "form__border" %>
+  </div>
+
+    <%= button_tag(folder.new_record? ? "Create" : "Update", class: "btn") %>
+<% end %>

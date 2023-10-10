@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :notfound
 
@@ -19,7 +21,7 @@ class ApplicationController < ActionController::Base
   end
 
   def require_no_authentication
-    return if !user_signed_in?
+    return unless user_signed_in?
 
     flash[:warning] = 'You have been already signed in'
     redirect_to root_path

@@ -1,8 +1,7 @@
-module ApplicationHelper
+# frozen_string_literal: true
 
+module ApplicationHelper
   def inline_errors_for(object, field)
-    if object.errors[field.to_sym].any?
-      content_tag(:p, object.errors[field.to_sym].first, class: 'form__error')
-    end
+    content_tag(:p, object.errors[field.to_sym].first, class: 'form__error') if object.errors[field.to_sym].any?
   end
 end

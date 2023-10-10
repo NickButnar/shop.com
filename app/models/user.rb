@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   attr_accessor :old_password
 
@@ -28,6 +30,7 @@ class User < ApplicationRecord
     # https://stackoverflow.com/questions/19605150/regex-for-password-must-contain-at-least-eight-characters-at-least-one-number-a
     return if password.blank? || password =~ /(^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$)/
 
-    errors.add :password, 'complexity requirement not met. Minimum length 8 characters, at least one letter and one number'
+    errors.add :password,
+               'complexity requirement not met. Minimum length 8 characters, at least one letter and one number'
   end
 end
